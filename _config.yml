@@ -7,7 +7,7 @@ description: "Each time of study is leading towards success."
 keyword: "LittleNightmare, LittleNightmare Blog, 小小梦魇的博客, Conocrdia, University"
 url: "http://LittleNightmare.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
+github_repo: "https://github.com/LittleNightmare/LittleNightmare.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
