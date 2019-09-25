@@ -3,7 +3,7 @@ title: LittleNightmare Blog
 SEOTitle: 小小梦魇的博客 | LittleNightmare Blog
 header-img: img/post-bg-desk.jpg
 email: littlenightmare2000@gmail.com
-description: "Each time of study is leading towards success."
+description: "Each Time of Study is Leading Towards Success."
 keyword: "LittleNightmare, LittleNightmare Blog, 小小梦魇的博客, Conocrdia, University"
 url: "http://LittleNightmare.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
@@ -11,8 +11,8 @@ github_repo: "https://github.com/LittleNightmare/LittleNightmare.github.io.git" 
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: /img/avatar_m.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "Goals Determine What You Going to Be!"
+sidebar-avatar: /img/random_m.jepg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
