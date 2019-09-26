@@ -12,7 +12,7 @@ github_repo: "https://github.com/LittleNightmare/LittleNightmare.github.io.git" 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Goals Determine What You Going to Be!"
-sidebar-avatar: /img/random_m.jepg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/random_m.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
