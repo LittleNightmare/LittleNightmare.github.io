@@ -21,7 +21,7 @@ tags:
 4. Body部分参考如下设置，建议以文字开头，并关闭任何的文本编辑器，如Grammarly
 ```json
 {
-    "content":"来自{{EntryTitle}}\n{{EntryContent}}"
+  "content": "来自<<<{{EntryAuthor}}>>>的更新：\n\n<<<{{EntryTitle}}>>>\n<<<{{EntryContent}}>>>"
 }
 ```
 5. 当然不要忘记添加你选择`This`的`ingredient`添加到内容
