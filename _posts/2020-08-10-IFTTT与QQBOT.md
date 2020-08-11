@@ -21,7 +21,7 @@ tags:
 4. Body部分参考如下设置
 ```json
 {
-    "content":"发布新内容"
+    "content":"{{EntryTitle}}\n{{EntryContent}}"
 }
 ```
 5. 当然不要忘记添加你选择`This`的`ingredient`添加到内容
