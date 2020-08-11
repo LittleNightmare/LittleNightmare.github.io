@@ -18,10 +18,10 @@ tags:
 1. 首先在`This`选择你的触发条件，比方说RSS，或者Twitter。
 2. 在`That`页面选择Webhooks，点击`Make a web request`
 3. 这里会出现`URL`,`Method`,`Content Type`, 以及`Body`选项，其中`URL`参考ACT联动部分，`Method`选择Post，`Content Type`选择`application/json`
-4. Body部分参考如下设置
+4. Body部分参考如下设置，建议以文字开头
 ```json
 {
-    "content":"{{EntryTitle}}\n{{EntryContent}}"
+    "content":"来自{{EntryTitle}}\n{{EntryContent}}"
 }
 ```
 5. 当然不要忘记添加你选择`This`的`ingredient`添加到内容
