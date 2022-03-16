@@ -15,25 +15,30 @@ header-img: "img/post-bg-rwd.jpg"
 <div class="zh post-container">
 
     <!--copied from markdown -->
-    <blockquote><p>冰冻三尺 非一日之寒<br>
-    积土成山 非斯须之作</p></blockquote>
+    <blockquote>
+        <p>冰冻三尺 非一日之寒<br>
+            积土成山 非斯须之作</p>
+    </blockquote>
 
-    <p>Hey，我是<strong>小小梦魇(LittleNightmare)</strong>，一只学生，现在在加拿大读Computer Science。</p>
+    <p>Hey，我是<strong>小小梦魇(LittleNightmare)</strong>，一只学生，现在在加拿大读<abbr title="计算机科学">Computer Science</abbr>。</p>
 
     <p>平时喜欢宅在家里，现在从CE成功跳到了CS。</p>
-    
-    <p>会打羽毛球，但是好久都没有人跟我玩。</p>
-    
-    <p>这是我的参考 <a href="https://www.jianshu.com/p/e68fba58f75c">BY</a> 直接fork，基于 <a href="https://pages.github.com/">GitHub Pages</a>。如果有什么问题，欢迎提出探讨~</p>
+
+    <p>会打羽毛球，但是好久都没有人跟我玩，现在大概已经接不到球了。</p>
+
+    <p>不知道COVID-19疫情什么时候过去，学校又要进入线下授课了，孩子想要线上考试啊</p>
+
+    <p>这是我的参考 <a href="https://www.jianshu.com/p/e68fba58f75c">BY</a> 直接fork，基于 <a
+            href="https://pages.github.com/">GitHub Pages</a>。如果有什么问题，欢迎提出探讨~</p>
 
     <p></p>
-    
+
     <h5>Talks</h5>
 
     <ul>
         <li><a href="https://github.com">GitHub</a></li>
         <li><a href="http://jekyll.com.cn/">jekyll</a></li>
-        <li><a href="http://huangxuan.me/">Hux</a></li> 
+        <li><a href="http://huangxuan.me/">Hux</a></li>
         <li><a href="https://analytics.google.com/analytics">Google Analytics</a></li>
     </ul>
 </div>
@@ -70,15 +75,15 @@ header-img: "img/post-bg-rwd.jpg"
     window.addEventListener('hashchange', _render);
 
     // handle render
-    function _render(){
+    function _render() {
         var _hash = window.location.hash;
         // en
-        if(_hash == "#en"){
+        if (_hash == "#en") {
             $select.selectedIndex = 1;
             $en.style.display = "block";
             $zh.style.display = "none";
-        // zh by default
-        }else{
+            // zh by default
+        } else {
             // not trigger onChange, otherwise cause a loop call.
             $select.selectedIndex = 0;
             $zh.style.display = "block";
@@ -87,10 +92,10 @@ header-img: "img/post-bg-rwd.jpg"
     }
 
     // handle select change
-    function onLanChange(index){
-        if(index == 0){
+    function onLanChange(index) {
+        if (index == 0) {
             window.location.hash = "#zh"
-        }else{
+        } else {
             window.location.hash = "#en"
         }
     }
@@ -107,22 +112,22 @@ header-img: "img/post-bg-rwd.jpg"
 <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
 
 <div id="gitalk-container"></div>
-    <script type="text/javascript">
+<script type="text/javascript">
     var gitalk = new Gitalk({
-    clientID: '{{site.gitalk.clientID}}',
-    clientSecret: '{{site.gitalk.clientSecret}}',
-    repo: '{{site.gitalk.repo}}',
-    owner: '{{site.gitalk.owner}}',
-    admin: ['{{site.gitalk.admin}}'],
-    distractionFreeMode: {{site.gitalk.distractionFreeMode}},
-    id: 'about',
+        clientID: '{{site.gitalk.clientID}}',
+        clientSecret: '{{site.gitalk.clientSecret}}',
+        repo: '{{site.gitalk.repo}}',
+        owner: '{{site.gitalk.owner}}',
+        admin: ['{{site.gitalk.admin}}'],
+        distractionFreeMode: "{{site.gitalk.distractionFreeMode}}",
+        id: 'about',
     });
     gitalk.render('gitalk-container');
 </script>
 {% endif %}
 <!-- Gitalk end -->
 
- <!-- disqus 评论框 start  -->
+<!-- disqus 评论框 start  -->
 {% if site.disqus.enable %}
 
 <div class="comment">
@@ -138,7 +143,7 @@ header-img: "img/post-bg-rwd.jpg"
     var disqus_identifier = "{{site.disqus.username}}/{{page.url}}";
     var disqus_url = "{{site.url}}{{page.url}}";
 
-    (function() {
+    (function () {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
@@ -146,4 +151,3 @@ header-img: "img/post-bg-rwd.jpg"
 </script>
 <!-- disqus 公共JS代码 end -->
 {% endif %}
-
