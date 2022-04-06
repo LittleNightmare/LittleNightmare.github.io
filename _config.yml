@@ -41,7 +41,10 @@ anchorjs: true                          # if you want to customize anchor. check
 # from PR#40, to support local preview for Jekyll 3.0
 gems: [jekyll-paginate]
 
-
+# set cache
+webrick:
+  headers:
+    Cache-Control: no-cache
 
 
 # Markdown settings
@@ -101,9 +104,6 @@ friends: [
     {
         title: "BY",
         href: "http://qiubaiying.github.io"
-    },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
     },{
         title: "Apple",
         href: "https://apple.com"
