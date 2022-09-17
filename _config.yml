@@ -54,6 +54,8 @@ webrick:
 markdown: kramdown
 highlighter: rouge
 kramdown:
+  parse_block_html: true
+  parse_span_html: true
   input: GFM                            # use Github Flavored Markdown !important
 
 
