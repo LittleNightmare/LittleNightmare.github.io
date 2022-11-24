@@ -200,6 +200,19 @@
     ga('send', 'pageview');
 </script>
 {% endif %}
+{% if site.google_tag %}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_tag }}"></script>
+<script>
+    var _gTag = '{{ site.google_tag }}';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', _gTag);
+</script>
+{% endif %}
+
 
 
 <!-- Baidu Tongji -->
