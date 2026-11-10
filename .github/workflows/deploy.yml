@@ -1,0 +1,61 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+# Pages 部署需要的权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 确保只有一个部署任务同时运行
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 11.22.0
+          run_install: false
+          
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+      
+      - name: Build site
+        run: pnpm run build
+
+      - name: Create .nojekyll file
+        run: touch dist/.nojekyll
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist  # Astro默认构建输出目录
+          include-hidden-files: true  # Keep .nojekyll (excluded by default since v4)
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

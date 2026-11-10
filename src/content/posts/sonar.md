@@ -1,0 +1,126 @@
+---
+title: 卫月插件介绍-Sonar
+published: 2022-04-04
+description: 卫月插件 Sonar 的介绍，以及配置方法
+tags: [FF14, Dalamud, 卫月, 狩猎, Sonar]
+category: FF14
+image: ./images/post-bg-hacker.jpg
+slug: sonar
+series: 卫月插件
+seriesOrder: 1
+---
+
+# 简介
+这篇文章的目的是介绍卫月插件：Sonar。这个插件的作用是自动上报并接收狩猎，fate信息，并在游戏内推送消息。这是一个少见的闭源插件，但~~据说~~在国际服有很高普及率。Sonar的基本原理是，有一个Sonar用户发现了某个狩猎怪或fate，会自动上报服务器，其他用户如果勾选了这个怪或者fate，就能从服务器收到消息。所以如果Sonar的用户越多，大家也可以更准确更快捷的收到消息。
+
+另外，文章作者**并非**Sonar作者，也**不参与**任何的Sonar管理。
+
+# 下载安装
+请首先参考[Dalamud 卫月框架](https://bbs.tggfl.com/topic/32/dalamud-%E5%8D%AB%E6%9C%88%E6%A1%86%E6%9E%B6)安装卫月框架并启动。
+
+成功启动卫月时，在标题界面左侧，会有卫月的图标。可以选择进入游戏后`按ESC-点击新出现新的卫月插件-在打开的界面右上角搜索Sonar`或者直接在标题界面`鼠标移动到卫月图标-点击插件管理-在打开的界面右上角搜索Sonar`，然后点击唯一一个插件，再点击`安装vx.x.x.x`（x在这里是版本号）。
+
+安装成功后，原来的`安装vx.x.x.x`会变成`禁用`，旁边的⚙图标是`打开Sonar插件设置`，🌐指向了Sonar的[Discord频道](https://discord.gg/K7y24Rr)，🗩是插件反馈。
+
+到这里Sonar的安装就完成了，但想要接受狩猎怪信息，还需要一番设置。
+
+# Sonar配置
+这里提供两套配置，一套给懒得看全部配置的，一套详细翻译。
+#### 设置90级Fate以及全大区的S怪
+首先如下图所示，来到`Hunts`标签页，在`Hunt Report Notifications`下确认`Rank S`设置为`Data Center`
+
+![Hunts界面](./images/sonar-1.png)
+
+如果需要S怪声音提醒，来到`Hunt Sound Alterts Configuration`勾选`Play sound on Rank `
+
+接下来，点开`FATEs`标签页，在`Fate Selection`中通过`Level`倒序快速定位两个90级fate，将两个对应`Jurisdiction`调整到`Data Center`。如果需要提醒在聊天栏中和声音提醒，请勾选`Chat`和`Sound`。并在`Fate Chat Alerts Configuration`中选择提示音效。
+
+![FATEs界面](./images/sonar-2.png)
+
+最后进入游戏在聊天框中输入`/sonar`即可打开Sonar消息主页
+
+请注意，如果想要接收到S怪和Fate提醒，请**务必**确保两个界面的`Contribute Hunt Reports`和`Contribute Fate Reports`处于勾选状态。
+
+推荐，取消掉勾选`Track All Hunts`和`Track All Fates`这两个选项。主要原因是，这个会让你收到所有的狩猎和Fate报告，包括国际服的。可能这两个选项的主要作用是，如果你修改了监听范围，能及时显示，但用途确实不大，还浪费服务器资源。
+
+#### 配置翻译
+下面是监听的管辖范围，范围由小到大排列，下面的范围囊括了上面
+
+|原文|翻译|解释|举例|
+|:-:|:-:|:-|:-|
+|None|无|不接收任何消息|我将2.0的设置为None，则不接收任何2.0的狩猎怪通知|
+|Instance|当前线路|接收当前所在线路|比方说`叹息海`1、2线。比如我在`叹息海`1线，但2线刷了不会收到通知|
+|Zone|当前区域|接收所在区域内的所有线路|比方说伊尔美格，珂露西亚岛。比如我在伊尔美格1线，2线刷了我也能接到通知|
+|World|当前服务器|接收当前所在服务器内的所有区域|比方说狗区的`水晶塔`，`伊修加德`，具体看[官网](https://ff.web.sdo.com/web8/index.html#/servers)。比如在猫区的`延夏`服务器，可以收到`延夏`刷的怪的通知，但收不到隔壁紫水栈桥的|
+|Data Center|当前大区|接收当前所在大区的所有服务器|鸟，猪，猫，狗。比如在鸟区，整个鸟区的都怪刷新了都能收到通知|
+|Region|当前区域|接收当前所在区域的所以大区|美服，日服，国服等等。比如在日服，接收整个日服所有大区的通知|
+|Audience|当前运营商(不准确)|接收当前所在运营商的所有区域|国际服，国服，韩服。人在国服没区别，国际服会包括所有SE直接运营的区域|
+|All|全部|接收全部消息|全球的ff14哪里报了你都能知道|
+
+聊天频道：
+请暂时先参考[文本指令](https://ff14.huijiwiki.com/wiki/%E6%96%87%E6%9C%AC%E6%8C%87%E4%BB%A4)，通过搜索英文指令来确认聊天频道。
+
+TODO 先自己举一反三吧，懒了
+
+# 其他Sonar相关链接
+
+[Sonar配置界面翻译](https://bbs.tggfl.com/topic/137/sonar%E9%85%8D%E7%BD%AE%E7%95%8C%E9%9D%A2%E7%BF%BB%E8%AF%91)
+
+[獭獭机器人sonar功能](https://bbs.tggfl.com/topic/135/%E5%8D%AB%E6%9C%88%E5%94%A2%E5%91%90%E6%8C%87%E8%B7%AF-%E4%BB%8E%E5%A4%B4%E8%B7%9F%E5%88%B0%E5%B0%BE-%E4%BD%A0%E4%B9%9F%E8%83%BD%E4%BD%93%E9%AA%8C%E5%88%B0%E6%9C%80%E6%96%B0%E7%9A%84%E7%8D%AD%E7%8D%AD%E6%9C%BA%E5%99%A8%E4%BA%BAsonar%E5%8A%9F%E8%83%BD)
+
+# FAQ
+
+Q: 我开Sonar会被拂晓查到吗？
+<br>
+A: 理论上你不直播，不截图带着sonar界面发到网上，就不会，消息没有发送到游戏服务器。但根据游戏用户协议，第三方仍有封号风险。
+
+Q: Sonar是脚本吗？
+<br>
+A: 根据我对脚本的理解，Sonar没有操控你的人物，或自动让你传送到对应地图的功能，所以不算。
+
+Q: Sonar是外挂吗？
+<br>
+A: 根据我对外挂的理解，Sonar跟ACT一样都是外挂，这取决于你对外挂的定义；或者参考游戏的用户协议来理解
+
+Q: Sonar有牟利行为吗？
+<br>
+A: 根据我对Sonar的了解，Sonar本身没有任何收费机制，除了Sonar本身属于闭源软件，但其安装下载使用都是免费的。不排除有人利用Sonar进行牟利，遇到情况请尽可能举报。
+
+Q: 我去吃S有疑似触发组的私聊问我各种信息，我该怎么办？
+<br>
+A: 个人建议，只要你没抢开怪，或进行其他破坏游戏环境的操作，只是安静的等待就可以不理他。在尊重触发者的劳动成果的同时，你也付了点卡/月卡，都是玩家，你们之间关系是平等的。但也请不要在游戏内回复外挂相关内容，防止恶意举报。
+
+Q: 我遇到有人恶意抢开/跳脚扰乱正常的狩猎秩序的疑似Sonar用户该怎么办？
+<br>
+A: 建议[点击链接加入群聊【Sonar国服支持】](https://jq.qq.com/?_wv=1027&k=6xizDxvg)，进行反馈；也可以前往Sonar的[DC频道](https://discord.gg/K7y24Rr)中的`support-cn`频道进行举报；或者前往[【腾讯文档】Sonar不和谐使用收集表](https://docs.qq.com/form/page/DUW1wWHNjSWRRTkZR)填表反馈，请注意，麻烦提供游戏内截图；也可以私聊Bluefissure。
+
+Q: 我照着攻略把该开的都打开了，还是收不到Fate和狩猎怪消息。
+<br>
+A: 前往`About`标签页，检查`Sonar Status`是不是`Connected`，如果不是，请检查网络状态，比如说切换加速器模式，或者其他可能影响网络的软件。或者禁用并重新安装插件，可能有更新。另外，如果你进行了错误信息/恶意抢开/跳脚扰乱正常的狩猎等，可能被Sonar方面封号。
+
+Q: 我只想接收狩猎怪和Fate消息，但不想上传数据可以吗？/ 我不想使用Sonar，想从外部访问到狩猎和Fate的数据，可以吗？
+<br>
+A: 游戏内的Sonar插件不行，但S怪和成就fate可以外部访问，请参考[卫月唢呐指路](https://bbs.tggfl.com/topic/135/%E5%8D%AB%E6%9C%88%E5%94%A2%E5%91%90%E6%8C%87%E8%B7%AF-%E4%BB%8E%E5%A4%B4%E8%B7%9F%E5%88%B0%E5%B0%BE-%E4%BD%A0%E4%B9%9F%E8%83%BD%E4%BD%93%E9%AA%8C%E5%88%B0%E6%9C%80%E6%96%B0%E7%9A%84%E7%8D%AD%E7%8D%AD%E6%9C%BA%E5%99%A8%E4%BA%BAsonar%E5%8A%9F%E8%83%BD) ；如果需求S怪CD可以访问[獭窝](https://xn--v9x.net/hunt/sonar/)
+
+Q: 我只想自己找狩猎怪和fate，并且愿意不接收其他人的上报数据可以吗？
+<br>
+A: 可以，关掉`Contribute Hunt Reports`和`Contribute Fate Reports`即可。
+
+Q: 我收到了消息前往，但并没对应的Fate/狩猎怪。
+<br>
+A: 可能是正好打完，或者没参与狩猎离开了，也有可能因为最近Sonar收到大量恶意上报S信息，但已经在处理了，目前主要集中在S怪上；Fate暂时没有被攻击，如果没有Fate建议检查线路。
+
+Q: **我发现文中信息描述不当，或容易造成歧义，该怎么处理？**
+<br>
+A: 请在下方评论留言，我看到后会及时整改。同时，我的语文功底并不好，如造成影响，还请多多见谅。
+
+# 更新日志
+<div>
+<details markdown=1>
+
+<summary markdown="span">EST 2023.08.10</summary>
+
+添加并修改监听范围的相关描述；删除一些过时内容
+
+</details>
+</div>
