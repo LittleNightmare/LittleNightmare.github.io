@@ -25,6 +25,7 @@ jobs:
         with:
           enablement: true
       - run: pnpm build
+      - run: cp dist/rss.xml dist/feed.xml
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
