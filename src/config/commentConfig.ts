@@ -56,11 +56,11 @@ export const commentConfig: CommentConfig = {
 		// 设置 Giscus 评论系统仓库
 		repo: "LittleNightmare/LittleNightmare.github.io",
 		// 设置 Giscus 评论系统仓库ID
-		repoId: "",
+		repoId: "MDEwOlJlcG9zaXRvcnkxOTQ1NzQ3Njk=",
 		// 设置 Giscus 评论系统分类
-		category: "Comments",
+		category: "Announcements",
 		// 获取 Giscus 评论系统分类ID
-		categoryId: "",
+		categoryId: "DIC_kwDOC5j5sc4DKzGv",
 		// 获取 Giscus 评论系统映射方式
 		mapping: "pathname",
 		// 获取 Giscus 评论系统严格模式
