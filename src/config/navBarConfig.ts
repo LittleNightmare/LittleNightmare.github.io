@@ -22,12 +22,17 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		url: "#",
 		icon: "material-symbols:article",
 		children: [
-			{
-				name: "GitHub",
-				url: "https://github.com/LittleNightmare",
-				external: true,
-				icon: "fa7-brands:github",
-			},
+			// 归档
+			LinkPresets.Archive,
+
+			// 分类
+			LinkPresets.Categories,
+
+			// 标签
+			LinkPresets.Tags,
+
+			// 系列
+			LinkPresets.Series,
 		],
 	});
 

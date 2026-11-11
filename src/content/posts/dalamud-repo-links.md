@@ -1,6 +1,7 @@
 ---
 title: 卫月仓库链接整理
 published: 2021-05-18
+updated: 2023-05-28
 description: 卫月插件第三方库的链接整理
 tags: [FF14, Dalamud, 卫月]
 category: FF14
