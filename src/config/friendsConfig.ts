@@ -21,7 +21,26 @@ export const friendsPageConfig: FriendsPageConfig = {
 };
 
 // 友链配置
-export const friendsConfig: FriendLink[] = [];
+export const friendsConfig: FriendLink[] = [
+	{
+		title: "Bluefissure's Blog",
+		imgurl: "https://blog.bluefissure.com/images/avatar.gif",
+		desc: "A Place for Recording · 技术随笔、LeetCode 题解与折腾记录",
+		siteurl: "https://blog.bluefissure.com/",
+		tags: ["技术", "博客"],
+		weight: 10,
+		enabled: true,
+	},
+	{
+		title: "AAKaiGua",
+		imgurl: "https://aakaigua.com/assets/avatar.png",
+		desc: "FF14 卫月 / Dalamud 插件与工具分享（XIV Chat、Pawprint 驯兽师自动化等）",
+		siteurl: "https://aakaigua.com/",
+		tags: ["FF14", "Dalamud"],
+		weight: 10,
+		enabled: true,
+	},
+];
 
 // 获取启用的友链并进行排序
 export const getEnabledFriends = (): FriendLink[] => {
